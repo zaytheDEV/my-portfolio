@@ -1,0 +1,85 @@
+//imports
+@import "../../MainStyles";
+@import "../../breakpoints/breakpoints.scss";
+
+.project-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}
+.project-details__title {
+  text-transform: uppercase;
+  line-height: 0.95;
+  width: 300px;
+  margin-bottom: 4vw;
+  @include mediumFont;
+  font-size: 1.5rem;
+}
+.project-details__description {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  max-width: 500px;
+  color: rgb(60, 60, 60);
+  h1 {
+    color: $mainBlack;
+    text-transform: uppercase;
+    @include semiBoldFont;
+    font-size: 1.1rem;
+    margin-bottom: 3vw;
+  }
+  p {
+    @include lightFont;
+    font-size: 1rem;
+  }
+}
+@include media(">=tablet") {
+  .project-details {
+    margin-top: 10vw;
+    margin-bottom: 10vw;
+  }
+  .project-details__title {
+    width: 400px;
+    font-size: 2rem;
+  }
+  .project-details__description {
+    max-width: 650px;
+    h1 {
+      font-size: 1.3rem;
+    }
+    p {
+      font-size: 1.3rem;
+    }
+  }
+}
+@include media(">=smallLT") {
+  .project-details__title {
+    font-size: 2rem;
+  }
+  .project-details__description {
+    max-width: 650px;
+    h1 {
+      font-size: 1.3rem;
+    }
+    p {
+      font-size: 1.2rem;
+    }
+  }
+}
+@include media(">=laptop") {
+  .project-details {
+    flex-direction: row;
+    gap: 0;
+  }
+  .project-details__description {
+    p {
+      font-size: 1.5rem;
+    }
+  }
+}
+@include media(">=LGdesktop") {
+  .project-details__description {
+    max-width: 700px;
+  }
+}

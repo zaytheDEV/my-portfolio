@@ -1,0 +1,33 @@
+@import "../MainStyles";
+@import '../breakpoints/breakpoints.scss';
+.loader {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  z-index: 1200;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loader__SVG{
+  width: 200px;
+  height: 100px;
+  position: relative;
+  @include media('>=tablet') {
+    width: 400px;
+  }
+  @include media('>=laptop') {
+    width: 500px;
+  }
+}
+.loader__cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+}

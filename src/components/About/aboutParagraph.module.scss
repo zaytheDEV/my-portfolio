@@ -1,0 +1,32 @@
+@import "../../MainStyles";
+@import "../../breakpoints/breakpoints.scss";
+
+.paragraph {
+  max-width: 700px;
+  gap: 30px;
+  line-height: 1.1;
+  margin-top: 4vw;
+  @include mediumFont;
+  font-size: 1.3rem;
+  @include smoothTransition(all);
+  margin-bottom: 50px;
+  b {
+    color: $mainRed;
+    @include semiBoldFont;
+  }
+  em {
+    color: #fec5bb;
+    @include semiBoldFont;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  @include media(">=tablet") {
+    font-size: 2.2rem;
+  }
+  @include media(">=smallLT") {
+    max-width: 900px;
+    font-size: 3rem;
+  }
+}
+
+//media queries

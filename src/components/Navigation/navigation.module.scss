@@ -1,0 +1,150 @@
+//imports
+@import "../../breakpoints/breakpoints.scss";
+@import '../../MainStyles';
+.navigation{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100vw;
+}
+.nav__icon {
+  top: 15px;
+  padding: 5px;
+  font-size: 0.89rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  z-index: 100;
+  span{
+    @include mediumFont;
+  }
+}
+
+.nav__work {
+  position: fixed;
+  left: 20px;
+}
+.nav__title {
+  position: fixed;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  padding: 5px;
+  cursor: pointer;
+  z-index: 1000;
+}
+.nav__title span {
+  font-size: 1rem;
+  @include boldFont;
+  text-transform: uppercase;
+  color: $mainBlack;
+}
+.nav__about {
+  position: fixed;
+  right: 20px;
+}
+
+.nav__contactCircle {
+  position: fixed;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  bottom: 15px;
+  right: 20px;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  background-color: #363636;
+  cursor: pointer;
+  z-index: 1000;
+  transition: background-color 0.5s ease-in-out;
+}
+.nav__contactSVG {
+  width: 20px;
+  height: 100%;
+  transition: transform 0.5s ease;
+}
+.nav__contactCircle:hover {
+  background-color: #696969;
+}
+.nav__contactCircle:hover .nav__contactSVG {
+  transform: scale(1.1);
+}
+.nav__aboutTitle {
+  margin-right: 5px;
+}
+.navigation__social {
+  position: fixed;
+  bottom: 15px;
+  width: 60px;
+  left: 20px;
+  display: none;
+  z-index: 1000;
+  gap: 10px;
+  @include media(">=smallLT") {
+    width: 70px;
+    bottom: 10px;
+  }
+}
+.navigation__link{
+  width: 35px;
+  height: 100%;
+  @include media(">=tablet") {
+    width: 28px;
+  }
+  @include media(">=smallLT") {
+    width: 35px;
+  }
+}
+
+/* tablet view -----------------*/
+@include media(">=tablet") {
+  .navigation__social {
+    display: flex;
+  }
+  .nav__icon {
+    font-size: 1rem;
+  }
+  .nav__about {
+    right: 30px;
+  }
+  .nav__work {
+    left: 30px;
+  }
+  .nav__contactCircle {
+    display: flex;
+  }
+}
+/* Desktop View -----------*/
+@include media(">=smallLT") {
+  .nav__title {
+    top: 30px;
+  }
+  .nav__title span {
+    font-size: 2rem;
+  }
+  .nav__work {
+    left: 60px;
+    top: 30px;
+  }
+  .nav__about {
+    right: 60px;
+    top: 30px;
+  }
+  .nav__contactCircle {
+    height: 60px;
+    width: 60px;
+    right: 60px;
+    bottom: 30px;
+  }
+  .nav__contactSVG {
+    width: 25px;
+  }
+  .navigation__social {
+    left: 60px;
+    bottom: 30px;
+  }
+}

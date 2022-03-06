@@ -1,0 +1,295 @@
+//scss imports
+@import "../../MainStyles";
+@import "../../breakpoints/breakpoints.scss";
+//project coolors
+$femmesPink: #fec5bb;
+$femmesBlue: #d8e2dc;
+$femmesOrange: #fec89a;
+
+//Main section
+.app-main{
+  width: 100vw;
+  overflow-x: hidden;
+}
+//app preview section
+.app-preview {
+  width: 100vw;
+  height: 400px;
+  margin-top: 10vw;
+  margin-bottom: 10vw;
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  @include media(">=tablet") {
+    height: 500px;
+  }
+  @include media(">=laptop") {
+    height: 600px;
+    video {
+      object-fit: contain;
+    }
+  }
+  @include media(">=LGdesktop") {
+    height: 700px;
+  }
+}
+
+//header description
+.header-description__holder,
+.challenges-container {
+  margin-top: 10vw;
+  margin-bottom: 10vw;
+  @include pageIndent;
+  @include media(">=tablet") {
+    margin-top: 0;
+  }
+}
+//---------App Screens section
+.app-screens {
+  position: relative;
+  padding-top: 70px;
+  height: auto;
+  @include pageIndent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.screens-container {
+  display: flex;
+  flex-direction: column;
+  @include media(">=tablet") {
+    flex-direction: row;
+    gap: 50px;
+  }
+}
+.column {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-items: flex-end;
+  @include media(">=tablet") {
+    gap: 100px;
+    width: 50%;
+  }
+}
+.column--right {
+  @include media(">=tablet") {
+    align-items: flex-start;
+    margin-top: 8vw;
+  }
+}
+.screen-holder {
+  width: 100%;
+  height: 400px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  @include media(">smallLT") {
+    width: 500px;
+    height: 700px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    height: 650px;
+  }
+}
+//-----------------Project Features
+.project-features {
+  @include pageIndent;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30vw;
+  @include media(">=smallLT") {
+    margin-bottom: 15vw;
+  }
+}
+.feature-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 100px;
+}
+.feature__description {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 450px;
+  h1 {
+    color: #fff;
+    font-weight: normal;
+    @include boldFont;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+  }
+  p {
+    color: #fff;
+    @include lightFont;
+    font-size: 1rem;
+  }
+}
+.feature__video {
+  width: 100%;
+  min-width: 350px;
+  max-width: 550px;
+  height: 400px;
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  @include media(">=tablet") {
+    height: 500px;
+  }
+  @include media(">=smallLT") {
+    height: 550px;
+  }
+  @include media(">=LGdesktop") {
+    min-width: 500px;
+    height: 750px;
+    background-color: skyblue;
+  }
+}
+@include media(">=tablet") {
+  .feature__description {
+    h1 {
+      font-size: 2vw;
+    }
+    p {
+      font-size: 2vw;
+    }
+  }
+}
+@include media(">=smallLT") {
+  .feature-container {
+    flex-direction: row;
+    margin-bottom: 15vw;
+  }
+  .feature__description {
+    h1 {
+      font-size: 1.5rem;
+    }
+    p {
+      font-size: 1.2rem;
+    }
+  }
+}
+@include media(">=laptop") {
+  .feature__description {
+    h1 {
+      font-size: 2rem;
+    }
+    p {
+      font-size: 1.4rem;
+    }
+  }
+}
+@include media(">=LGdesktop") {
+  .feature__description {
+    max-width: 650px;
+    h1 {
+      font-size: 2.5rem;
+    }
+    p {
+      font-size: 1.8rem;
+    }
+  }
+}
+//-------------------Logo design Section
+.project-logo-design {
+  position: relative;
+  @include pageIndent;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40vw;
+  @include media(">=smallLT") {
+    margin-bottom: 20vw;
+  }
+}
+.logo-description {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  flex-direction: column;
+  gap: 100px;
+  @include media(">=tablet") {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.logo-text {
+  .logo-text__text {
+    font-size: 1.1rem;
+    @include mediumFont;
+    width: 100%;
+    max-width: 550px;
+    color: $mainBlack;
+    @include media(">=tablet") {
+      font-size: 1.5rem;
+    }
+    @include media(">=laptop") {
+      font-size: 1.7rem;
+    }
+  }
+}
+.logo-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+  }
+  span {
+    font-family: femmes;
+    color: $mainBlack;
+    font-size: 1rem;
+    text-transform: capitalize;
+  }
+  @include media(">=tablet") {
+    img {
+      width: 120px;
+      height: 120px;
+    }
+    span {
+      font-size: 2rem;
+    }
+  }
+  @include media(">=smallLT") {
+    img {
+      width: 150px;
+      height: 150px;
+    }
+  }
+  @include media(">=laptop") {
+    img {
+      width: 200px;
+      height: 200px;
+    }
+    span {
+      font-size: 2.2rem;
+    }
+  }
+  @include media(">=LGdesktop") {
+    img {
+      width: 250px;
+      height: 250px;
+    }
+    span {
+      font-size: 3rem;
+    }
+  }
+}
+//--------------Developer tools section
+.project-tools {
+  width: 100vw;
+  position: relative;
+  @include pageIndent;
+}

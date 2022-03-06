@@ -1,0 +1,144 @@
+//imports
+@import "../../breakpoints/breakpoints.scss";
+@import "../../MainStyles";
+
+.main-project {
+  width: 100%;
+  height: auto;
+  position: relative;
+  gap: 10px;
+  padding-top: 70px;
+  @include pageIndent;
+  @include centerContent;
+  flex-direction: column;
+}
+.project-picture {
+  height: 400px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  @include centerContent;
+  cursor: pointer;
+  overflow: hidden;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+.project-detials {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.2;
+  width: 100%;
+  pointer-events: none;
+}
+.detail-holder {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+  text-align: left;
+}
+.project-title {
+  display: block;
+  height: 100%;
+  width: 100%;
+  white-space: nowrap;
+  @include semiBoldFont;
+  font-size: 11.3vw;
+  letter-spacing: -0.4vw;
+  text-transform: capitalize;
+  color: $mainBlack;
+}
+.project-description {
+  display: block;
+  font-size: 16px;
+  text-align: left;
+}
+//Modifiers
+.project--marginTop {
+  position: relative;
+  margin-top: -2vw;
+}
+.detail--uber-holder {
+  mix-blend-mode: normal;
+}
+.detail--uber {
+  color: $mainBlack !important;
+}
+.img--large {
+  width: 200px !important;
+  height: 200px !important;
+}
+
+//Media Queries
+@include media(">=tablet") {
+  .main-project {
+    height: 700px;
+    gap: 0;
+  }
+  .project-picture {
+    width: 100%;
+    max-width: 500px;
+    height: 500px;
+    .project-img {
+      width: 180px;
+      height: 180px;
+    }
+  }
+  .project-detials {
+    position: absolute;
+    left: 80px;
+    bottom: 20%;
+    width: auto;
+  }
+  .project-title {
+    font-size: 12vw;
+    letter-spacing: -0.7vw;
+    padding-right: 5px;
+  }
+  .project-description {
+    font-size: 30px;
+  }
+  .detail--uber-holder {
+    mix-blend-mode: difference;
+  }
+  .detail--uber {
+    color: #fff !important;
+  }
+  .img--large {
+    width: 230px !important;
+    height: 230px !important;
+  }
+}
+@include media(">=laptop") {
+  .main-project{
+    height: 100vh;
+  }
+  .project-picture{
+    max-width: 900px;
+    height: 80%;
+  }
+  .project-title{
+    font-size: 11vw;
+    padding-right: 1vw;
+  }
+  .project-detials {
+    left: 150px;
+    bottom: 15%;
+  }
+}
+@include media(">=laptop") {
+  .project-title{
+    font-size: 11vw;
+    padding-right: 1vw;
+  }
+  .project-detials {
+    left: 150px;
+    bottom: 15%;
+  }
+}

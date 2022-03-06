@@ -1,0 +1,98 @@
+//scss imports
+@import "../../MainStyles";
+@import "../../breakpoints/breakpoints.scss";
+
+//Main section
+.amazon-main{
+  width: 100vw;
+  overflow-x: hidden;
+}
+//app preview
+.app-preview {
+  width: 100vw;
+  height: fit-content;
+  margin-top: 10vw;
+  margin-bottom: 10vw;
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  @include media(">=laptop") {
+    height: 750px;
+    video {
+      object-fit: contain;
+    }
+  }
+}
+
+//header description
+.header-description__holder,
+.recap-container {
+  margin-top: 10vw;
+  margin-bottom: 10vw;
+  @include pageIndent;
+  @include media(">=tablet") {
+    margin-top: 0;
+  }
+}
+//app Features Section
+.features {
+  width: 100vw;
+  position: relative;
+  padding-top: 70px;
+  @include pageIndent;
+}
+.features-container {
+  display: flex;
+  flex-direction: column;
+}
+.features-row {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  @include media(">=tablet") {
+    flex-direction: row;
+  }
+}
+.feature {
+  max-width: 650px;
+  height: 500px;
+  @include media('>=laptop') {
+    height: 590px;
+  }
+  @include media('>=LGdesktop') {
+    height: 700px;
+  }
+}
+.feature__img {
+  width: 100%;
+  height: fit-content;
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+}
+.feature__description {
+  padding: 15px;
+  text-align: center;
+  font-size: 14px;
+  color: $mainBlack;
+  @include media(">=tablet") {
+    font-size: 15px;
+  }
+  @include media(">=laptop") {
+    font-size: 18px;
+  }
+}
+
+//--------------Developer tools section
+.project-tools {
+  width: 100vw;
+  position: relative;
+  padding-top: 70px;
+  @include pageIndent;
+}

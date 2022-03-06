@@ -1,0 +1,50 @@
+/**
+*
+* Testing
+*
+**/
+/**
+*
+* Testing
+*
+**/
+.paragraph {
+  max-width: 700px;
+  gap: 30px;
+  line-height: 1.1;
+  margin-top: 4vw;
+  font-family: 'Prompt', sans-serif;
+  font-weight: 500;
+  font-size: 1.3rem;
+  -webkit-transition: all 1.3s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: all 1.3s cubic-bezier(0.19, 1, 0.22, 1);
+  margin-bottom: 50px;
+}
+
+.paragraph b {
+  color: #F73131;
+  font-family: 'Prompt', sans-serif;
+  font-weight: 600;
+}
+
+.paragraph em {
+  color: #fec5bb;
+  font-family: 'Prompt', sans-serif;
+  font-weight: 600;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .paragraph {
+    font-size: 2.2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .paragraph {
+    max-width: 900px;
+    font-size: 3rem;
+  }
+}
+/*# sourceMappingURL=aboutParagraph.module.css.map */

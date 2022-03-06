@@ -1,0 +1,90 @@
+/**
+*
+* Testing
+*
+**/
+/**
+*
+* Testing
+*
+**/
+.link-button {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  border: solid 1px #151515;
+  margin-top: 4vw;
+  padding: 4px 2em 4px 2em;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 12px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  text-decoration: none;
+  -webkit-transition: border-color 1.3s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: border-color 1.3s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.link-button .link-button__title {
+  font-family: 'Prompt', sans-serif;
+  font-weight: 500;
+  white-space: nowrap;
+  text-decoration: none;
+  -webkit-transition: color 1.3s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: color 1.3s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+@media (min-width: 375px) {
+  .link-button {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 768px) {
+  .link-button {
+    font-size: 23px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .link-button {
+    margin-top: 2vw;
+    font-size: 1.2rem;
+  }
+  .link-button:hover {
+    border-color: #fff;
+  }
+}
+
+@media (min-width: 1366px) {
+  .link-button {
+    padding: 6px 1.5em 6px 1.5em;
+    font-size: 1.6rem;
+  }
+}
+
+@media (min-width: 1700px) {
+  .link-button {
+    padding: 6px 2em 6px 2em;
+    font-size: 1.9rem;
+  }
+}
+
+.link-button:hover .link-button__title {
+  color: #fff !important;
+}
+
+.link-button__cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #151515;
+  z-index: -1;
+}
+/*# sourceMappingURL=linkButton.module.css.map */

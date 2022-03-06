@@ -1,0 +1,42 @@
+//breakpoints
+@import "../../breakpoints/breakpoints.scss";
+.screen-col {
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  margin-top: 50px;
+}
+.screen-col__column {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+}
+
+//Break Points
+@include media(">=smallLT") {
+  .screen-col {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .screen-col__column {
+    align-items: flex-start;
+  }
+  .screen-col__column--right {
+    margin-top: 200px;
+    align-items: flex-end;
+  }
+}
+@include media(">=LGdesktop") {
+  .screen-col{
+    gap: 100px;
+  }
+  .screen-col__column {
+    gap: 100px;
+  }
+}

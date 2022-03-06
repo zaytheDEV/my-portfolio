@@ -1,0 +1,27 @@
+//imports
+@import "../../breakpoints/breakpoints.scss";
+@import "../../MainStyles";
+.titleDot-main {
+  position: absolute;
+  display: flex;
+  right: 0;
+  bottom: 0;
+  align-items: flex-end;
+  height: 100%;
+  padding-bottom: 1vw;
+  @include media(">=smallLT") {
+    padding-bottom: 10px;
+  }
+}
+.intro-title__dot {
+  width: 11px;
+  height: 11px;
+  background-color: $mainRed;
+  border-radius: 100%;
+  transform-origin: center;
+  will-change: transform;
+  @include media(">=smallLT") {
+    width: 40px;
+    height: 40px;
+  }
+}

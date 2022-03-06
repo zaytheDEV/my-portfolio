@@ -1,0 +1,206 @@
+@import "../../breakpoints/breakpoints.scss";
+@import "../../MainStyles";
+.footer {
+  height: fit-content;
+  display: flex;
+  position: relative;
+  @include centerContent;
+  flex-direction: column;
+  padding-top: 100px;
+  padding-bottom: 20px;
+  .footer__message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 100px;
+    width: 100%;
+    .h1-holder {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+    }
+    .message__h1 {
+      width: 100%;
+      height: 100%;
+      @include centerContent;
+      font-size: 16vw;
+      line-height: 18vw;
+      letter-spacing: -0.8vw;
+      width: 100%;
+      text-align: center;
+      @include semiBoldFont;
+      color: #fff;
+      will-change: transform;
+      transform-style: preserve-3d;
+    }
+    .message__h1--italic {
+      @include italicFont;
+      font-weight: 200;
+    }
+    .h1-block {
+      margin-top: -4vw;
+    }
+    @include media(">=smallLT") {
+      margin-bottom: 150px;
+      .message__h1 {
+        letter-spacing: -0.7;
+      }
+    }
+    @include media(">=laptop") {
+      .message__h1 {
+        font-size: 13vw;
+        line-height: 15vw;
+      }
+    }
+  }
+  .footer__contact-detail {
+    max-width: 300px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 100px;
+    font-size: 14.5px;
+    p {
+      @include lightFont;
+      color: #fff;
+    }
+    @include media(">=smallLT") {
+      font-size: 16.3px;
+    }
+  }
+  .footer-email {
+    @include centerContent;
+    flex-direction: column;
+    .footer-email__title {
+      text-align: center;
+      text-transform: uppercase;
+      color: #808080;
+      @include media('>=laptop') {
+        font-size: 1.2rem;
+      }
+    }
+  }
+  .footer-email__link {
+    width: fit-content;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+    position: relative;
+    color: #fff;
+    @include smoothTransition(color);
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #fff;
+      will-change: width;
+      @include smoothTransition(width);
+    }
+    &:hover {
+      color: #d1d1d1;
+      &::after {
+        width: 0;
+      }
+    }
+    @include media(">=largeMobile") {
+      font-size: 1.8rem;
+    }
+    @include media(">=tablet") {
+      font-size: 2.5pc;
+    }
+    @include media(">=laptop") {
+      height: 80px;
+      font-size: 3.5pc;
+    }
+    @include media(">=LGdesktop") {
+      height: 90px;
+      font-size: 4.5pc;
+    }
+  }
+  .footer__social {
+    margin-top: 60px;
+    height: 35px;
+    display: flex;
+    gap: 10px;
+    @include centerContent;
+    .footer-social__link {
+      width: 25px;
+      height: 100%;
+      object-fit: contain;
+    }
+    @include media(">=tablet") {
+      margin-top: 100px;
+      gap: 20px;
+      .footer-social__link {
+        width: 30px;
+      }
+    }
+    @include media(">=laptop") {
+      .footer-social__link {
+        width: 35px;
+      }
+    }
+  }
+  .footer__info {
+    position: absolute;
+    bottom: 0;
+    left: 5px;
+    span {
+      @include mediumFont;
+      color: #fff;
+      font-size: 12px;
+      @include media(">=largeMobile") {
+        font-size: 15px;
+      }
+      @include media(">=tablet") {
+        font-size: 21px;
+      }
+      @include media(">=smallLT") {
+        font-size: 1.2rem;
+      }
+      @include media(">=LGdesktop") {
+        font-size: 1.5rem;
+      }
+    }
+    @include media(">=smallLT") {
+      left: 20px;
+    }
+  }
+}
+.footer__myName {
+  position: absolute;
+  bottom: 0;
+  right: 5px;
+  span {
+    font-size: 12px;
+    color: #fff;
+    @include boldFont;
+    b {
+      @include boldFont;
+      color: #fff;
+    }
+    @include media(">=largeMobile") {
+      font-size: 15px;
+    }
+    @include media(">=tablet") {
+      font-size: 25px;
+    }
+    @include media(">=smallLT") {
+      font-size: 1.2rem;
+    }
+    @include media(">=LGdesktop") {
+      font-size: 1.5rem;
+    }
+  }
+  @include media(">=smallLT") {
+    right: 20px;
+  }
+}
+.footer-detail--chrome {
+  bottom: 10px !important;
+}

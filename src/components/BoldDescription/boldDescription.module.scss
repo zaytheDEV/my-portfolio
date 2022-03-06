@@ -1,0 +1,63 @@
+//imports
+@import "../../MainStyles";
+@import "../../breakpoints/breakpoints.scss";
+.bold-description {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 0.85;
+  margin-top: 5vw;
+  height: 30vh;
+  .description-text {
+    width: 100%;
+    height: fit-content;
+    overflow: hidden;
+    span {
+      display: block;
+      text-align: left;
+      @include semiBoldFont;
+      text-transform: uppercase;
+      font-size: 12vw;
+      white-space: nowrap;
+      letter-spacing: -0.2vw;
+      color: $mainBlack;
+      @include smoothTransition(color);
+    }
+  }
+  p {
+    margin-top: 3vw;
+    @include lightFont;
+    max-width: 450px;
+    line-height: 1.2;
+  }
+  @include media(">=tablet") {
+    p {
+      font-size: 2rem;
+    }
+    height: 40vh;
+  }
+  @include media(">=smallLT") {
+    .description-text {
+      span {
+        font-size: 8vw;
+      }
+    }
+  }
+  @include media(">=laptop") {
+    height: 60vh;
+    margin-top: 3vw;
+    .description-text{
+      span{
+        font-size: 11vw;
+      }
+    }
+  }
+  @include media(">=LGdesktop") {
+    .description-text {
+      span {
+        font-size: 10vw;
+      }
+    }
+  }
+}

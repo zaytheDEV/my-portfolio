@@ -1,0 +1,241 @@
+//imports
+@import "../../MainStyles";
+@import "../../breakpoints/breakpoints.scss";
+.about-main {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+//Header Photos section
+.header-photo-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 500px;
+  width: 100vw;
+  margin-top: -30vw;
+  @include pageIndent;
+  .photos-container {
+    width: 450px;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    @include media(">=tablet") {
+      width: 550px;
+    }
+    @include media(">=laptop") {
+      width: 600px;
+    }
+    @include media(">=LGdesktop") {
+      width: 700px;
+    }
+  }
+  @include media(">=tablet") {
+    height: 700px;
+    margin-top: 0;
+  }
+  @include media(">=smallLT") {
+    height: 700px;
+  }
+  @include media(">=laptop") {
+    height: 760px;
+    margin-top: 0;
+  }
+  @include media(">=LGdesktop") {
+    height: 900px;
+    margin-top: 0;
+  }
+}
+.photo-cover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+//------------About Description Section
+.about-description-container {
+  @include pageIndent;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100vw;
+  margin-top: 10vw;
+  position: relative;
+}
+.button-holder {
+  display: flex;
+  gap: 20px;
+}
+
+//-------------------Learning section
+.my-learning {
+  @include pageIndent;
+  margin-bottom: 100px;
+  height: auto;
+  .courses-main {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    .course {
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+      .course-block {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        gap: 30px;
+        padding-bottom: 30px;
+      }
+      span {
+        @include semiBoldFont;
+        font-size: 1.1rem;
+        display: flex;
+        flex-direction: column;
+        line-height: 1;
+        width: 30%;
+        @include smoothTransition(color);
+      }
+      .course-description {
+        width: 70%;
+        p {
+          font-size: 1.1rem;
+          @include mediumFont;
+          @include smoothTransition(color);
+        }
+        li {
+          list-style: none;
+          font-size: 1rem;
+          @include smoothTransition(color);
+        }
+      }
+      .course__line {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+      }
+      @include media(">=largeMobile") {
+        gap: 60px;
+      }
+      @include media(">=tablet") {
+        span {
+          font-size: 2rem;
+        }
+        .course-description {
+          p {
+            font-size: 2rem;
+          }
+          li {
+            font-size: 1.5rem;
+          }
+        }
+      }
+      @include media(">=laptop") {
+        padding-bottom: 50px;
+        span {
+          font-size: 2.5rem;
+          &::after {
+            font-size: 20px;
+          }
+        }
+        .course-description {
+          p {
+            font-size: 3pc;
+          }
+          li {
+            font-size: 2pc;
+          }
+        }
+      }
+      @include media(">=LGdesktop") {
+        margin-top: 100px;
+        padding-bottom: 100px;
+        span {
+          font-size: 3rem;
+          &::after {
+            font-size: 25px;
+          }
+        }
+        .course-description {
+          p {
+            font-size: 4pc;
+          }
+          li {
+            font-size: 2pc;
+          }
+        }
+      }
+    }
+  }
+}
+
+//-----------------Skills Section
+.skills__container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  @include pageIndent;
+  justify-content: center;
+  align-items: left;
+  .skill__type {
+    font-size: 12px;
+    @include mediumFont;
+    margin-bottom: 4vw;
+    white-space: nowrap;
+    color: $mainBlack;
+    @include media(">=tablet") {
+      font-size: 20px;
+    }
+    @include media(">=smallLT") {
+      font-size: 1.5rem;
+    }
+    @include media(">=laptop") {
+      font-size: 2rem;
+    }
+    @include media(">=LGdesktop") {
+      font-size: 2.2rem;
+    }
+  }
+}
+
+//---------------Short Description Section
+.short-description {
+  width: 100vw;
+  text-align: left;
+  @include pageIndent;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  @include media(">=tablet") {
+    margin-top: 200px;
+  }
+  @include media(">=laptop") {
+    gap: 80px;
+  }
+  p {
+    @include mediumFont;
+    @include responsiveParagraph;
+    color: $mainBlack;
+    b {
+      cursor: pointer;
+      color: #fec5bb;
+      text-decoration: underline;
+      @include italicFont;
+      @include smoothTransition(color);
+      &:hover {
+        color: #d1d1d1;
+      }
+    }
+  }
+}

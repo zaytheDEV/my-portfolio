@@ -1,0 +1,80 @@
+//imports
+@import "../../MainStyles";
+@import "../../breakpoints/breakpoints.scss";
+
+.intro {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  @include pageIndent;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+  @include media(">=smallLT") {
+    padding-top: 50px;
+  }
+}
+.intro-title {
+  display: flex;
+  position: relative;
+  height: min-content;
+  width: min-content;
+  flex-direction: column;
+  font-weight: normal;
+  line-height: 0.85;
+}
+.intro-title-holder {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  overflow-y: hidden;
+}
+.main-title-text {
+  display: block;
+  position: relative;
+  font-size: 12.5vw;
+  padding-right: 4.5vw;
+  @include boldFont;
+  text-transform: uppercase;
+  color: $mainBlack;
+  will-change: transform;
+  transform-style: preserve-3d;
+  white-space: nowrap;
+  b {
+    @include boldFont;
+    color: $mainBlack;
+  }
+  @include media(">=tablet") {
+    letter-spacing: -0.3vw;
+    padding-right: 3vw;
+  }
+  @include media(">=smallLT") {
+    padding-right: 4vw;
+  }
+}
+.header-description {
+  margin-top: 5vw;
+  @include mediumFont;
+  color: rgb(141, 141, 141);
+  @include media(">=laptop") {
+    font-size: 1.3rem;
+  }
+}
+//scroll indicator
+.scroll-indicator {
+  display: block;
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.2rem;
+  @include mediumFont;
+  color: $mainRed;
+  letter-spacing: 3px;
+}
+.scroll--mobile {
+  bottom: 160px !important;
+  font-size: 1rem;
+  letter-spacing: 1px;
+}

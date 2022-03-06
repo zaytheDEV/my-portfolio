@@ -1,0 +1,63 @@
+/**
+*
+* Testing
+*
+**/
+.workProject_Main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 85% 10%;
+      grid-template-rows: 85% 10%;
+      grid-template-areas: "projImg" "projDesc";
+  width: 100%;
+  height: 100%;
+}
+
+.workProject_img_container {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: projImg;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.workProject_img_container .logoStyle {
+  width: 50%;
+}
+
+.workProject_img_container .bannerStyle {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.workProject_description {
+  text-align: center;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: projDesc;
+  padding: 20px;
+  font-size: 14px;
+  color: var(--gray);
+}
+
+.workProject_description b {
+  color: var(--black);
+}
+
+@media (min-width: 1024px) {
+  .workProject_description {
+    font-size: 1.2rem;
+  }
+}
+/*# sourceMappingURL=WorkProject.css.map */

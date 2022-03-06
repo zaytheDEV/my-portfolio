@@ -1,0 +1,100 @@
+@import "./breakpoints/breakpoints.scss";
+
+//Font faces
+@mixin mainFont {
+  font-family: 'Prompt', sans-serif;
+  font-weight: 400;
+}
+@mixin mediumFont {
+  font-family: 'Prompt', sans-serif;
+  font-weight: 500;
+}
+@mixin semiBoldFont {
+  font-family: 'Prompt', sans-serif;
+  font-weight: 600;
+}
+@mixin boldFont {
+  font-family: 'Prompt', sans-serif;
+  font-weight: 700;
+}
+@mixin italicFont {
+  font-family: 'Prompt', sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+@mixin lightFont {
+  font-family: 'Prompt', sans-serif;
+  font-weight: 300;
+}
+//Media Indenting
+@mixin pageIndent {
+  padding-left: 20px;
+  padding-right: 20px;
+  @include media(">=largeMobile") {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  @include media(">=tablet") {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+  @include media(">=smallLT") {
+    padding-left: 160px;
+    padding-right: 160px;
+  }
+  @include media(">=LGdesktop") {
+    padding-left: 250px;
+    padding-right: 250px;
+  }
+}
+//Colors
+$mainBlack: #151515;
+$mainRed: #F73131;
+$mainGray: #D1D1D1;
+
+//Content Center
+@mixin centerContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+//Font Sizes
+$appTitleMobile: 1rem;
+$appTitleLT: 1.5rem;
+$appDescriptionMobile: 1rem;
+$appDescriptionMobileLarge: 2rem;
+$appDescriptionTablet: 5rem;
+$appDescriptionLT: 3rem;
+$appDescriptionLGDesktop: 5rem;
+$projectDetailsTitleMobile: 1rem;
+$projectDetailsTitleTablet: 1.2rem;
+$projectDetailsTitleLT: 1.5rem;
+$projectDetailsTitleLGDesktop: 1.6rem;
+$paragraphMobile: 16px;
+$paragraphTablet: 19px;
+$paragraphLT: 1.5rem;
+
+//Colors
+$appTitleColor: #bfbfbf;
+
+//smooth transition
+//Transitions
+$cubic-bezier: cubic-bezier(0.19, 1, 0.22, 1);
+@mixin smoothTransition($element) {
+  transition: $element 1.3s $cubic-bezier;
+}
+
+//Paragraph Fonts
+@mixin responsiveParagraph {
+  font-size: 1.7rem;
+  line-height: 1.1;
+  letter-spacing: -0.1vw;
+  @include media('>=tablet') {
+    letter-spacing: 0vw;
+    font-size: 4vw;
+  }
+  @include media(">=LGTablet") {
+    font-size: 4vw;
+    line-height: 4vw;
+  }
+}

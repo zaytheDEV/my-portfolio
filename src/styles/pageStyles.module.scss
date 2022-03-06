@@ -1,0 +1,240 @@
+//breakpoints
+@import "../MainStyles";
+@import "../breakpoints/breakpoints.scss";
+//variables
+$cubic-bezier: cubic-bezier(0.19, 1, 0.22, 1);
+$laptop-font: 1.5rem;
+
+//App Landing
+.app-header {
+  width: 100%;
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  @include pageIndent;
+  .app-header__title {
+    font-size: 14.5vw;
+    line-height: 0.89;
+    text-transform: capitalize;
+    color: $mainBlack;
+    @include semiBoldFont;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  .app-header__description {
+    font-size: 14px;
+    line-height: 1em;
+    color: $mainBlack;
+    text-align: center;
+    @include lightFont;
+  }
+  @include media('>=tablet'){
+    height: 50vh;
+    .app-header__description{
+      font-size: 22px;
+    }
+  }
+  @include media('>=smallLT') {
+    height: 70vh;
+  }
+}
+//App Preview
+.app-preview {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  .appPreview__video {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 300px;
+    img {
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+  @include media(">=tablet") {
+    .appPreview__video__bg {
+      height: 570px;
+      img {
+        width: 260px;
+      }
+    }
+  }
+  @include media(">=smallLT") {
+    .appPreview__video__bg {
+      height: 600px;
+      img {
+        width: 280px;
+      }
+    }
+  }
+  @include media(">=laptop") {
+    .appPreview__video__bg {
+      width: 500px;
+      height: 700px;
+      img {
+        width: 300px;
+      }
+    }
+  }
+}
+
+//App details
+
+//App Screens
+.app-screen-holder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include pageIndent;
+}
+//Dev Tools
+.development-tools {
+  @include pageIndent;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100px;
+  p{
+    max-width: 500px;
+    text-align: center;
+    text-transform: uppercase;
+    @include mediumFont;
+    margin-top: 20px;
+    font-size: 17px;
+  }
+  @include media(">=LGdesktop") {
+    height: 100vh;
+  }
+}
+.dev-tool-holder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  gap: 10px;
+  max-width: 900px;
+  @include media('>=laptop') {
+    margin-top: 20px;
+  }
+}
+.dev-tool {
+  width: fit-content;
+  height: fit-content;
+  border: solid thin $mainBlack;
+  border-radius: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+  span {
+    font-size: 1.2rem;
+    text-transform: capitalize;
+  }
+  @include media('>=tablet') {
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 45px;
+    span {
+      font-size: 1.5rem;
+    }
+  }
+  @include media('>=smallLT') {
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 45px;
+    span {
+      font-size: 2.3rem;
+    }
+  }
+  @include media(">=LGdesktop") {
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 45px;
+    span {
+      font-size: 3rem;
+    }
+  }
+}
+
+//Page button
+.view-button {
+  cursor: pointer;
+  width: fit-content;
+  height: 40px;
+  position: relative;
+  align-self: center;
+  margin-top: 50px;
+  span {
+    @include mediumFont;
+    font-size: 1.3rem;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    @include centerContent;
+    @include smoothTransition(color);
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #000;
+      will-change: width;
+      @include smoothTransition(width);
+    }
+  }
+  &:hover {
+    span {
+      color: #d1d1d1;
+    }
+    span {
+      &::after {
+        width: 0;
+      }
+    }
+  }
+  @include media(">=tablet") {
+    margin-top: 50px;
+    span {
+      font-size: 1.5rem;
+    }
+  }
+  @include media(">=smallLT") {
+    height: 50px;
+    span {
+      font-size: 1.6rem;
+    }
+  }
+  @include media(">=laptop") {
+    height: 65px;
+    span {
+      font-size: 2.5rem;
+    }
+  }
+}
+.lrg__btn {
+  height: 60px;
+  span {
+    font-size: 2rem;
+  }
+  @include media(">=tablet") {
+    height: 65px;
+    span {
+      font-size: 2.5rem;
+    }
+  }
+  @include media(">=smallLT") {
+    height: 60px;
+    span {
+      font-size: 2.5rem;
+    }
+  }
+}

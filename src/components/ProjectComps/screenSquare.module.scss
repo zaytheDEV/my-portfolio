@@ -1,0 +1,74 @@
+//imports
+@import "../../breakpoints/breakpoints.scss";
+@import "../../MainStyles";
+.screen-square {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  .screen-square__video {
+    width: 100%;
+    height: 350px;
+    video {
+      object-fit: cover;
+    }
+    @include media('>=tablet'){
+      height: 450px;
+    }
+    @include media('>=laptop'){
+      height: 550px;
+    }
+  }
+  .screen-square__img{
+    width: 100%;
+    height: 400px;
+    background-color: yellowgreen;
+    @include centerContent;
+    img{
+      width: 90%;
+      object-fit: cover;
+    }
+  }
+  .screen-square__video--desktop{
+    height: fit-content;
+    video{
+      object-fit: contain;
+    }
+  }
+  .screen-square__description {
+    span {
+      @include mediumFont;
+      font-size: 1rem;
+      text-transform: capitalize;
+    }
+    p {
+      color: #8b8b8b;
+      font-size: 16px;
+    }
+    @include media(">=tablet") {
+      span {
+        font-size: $projectDetailsTitleTablet;
+      }
+      p {
+        font-size: 17px;
+      }
+    }
+    @include media(">=smallLT") {
+      span {
+        font-size: 1.3rem;
+      }
+      p {
+        font-size: 16px;
+      }
+    }
+    @include media(">=smallLT") {
+      span {
+        font-size: 1.5rem;
+      }
+      p {
+        font-size: 18px;
+      }
+    }
+  }
+}

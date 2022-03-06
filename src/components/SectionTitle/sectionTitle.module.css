@@ -1,0 +1,79 @@
+/**
+*
+* Testing
+*
+**/
+/**
+*
+* Testing
+*
+**/
+/* section title ----------*/
+.section-title {
+  padding-left: 20px;
+  padding-right: 20px;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 80px;
+  width: 100vw;
+  top: 0;
+  left: 0;
+}
+
+@media (min-width: 375px) {
+  .section-title {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media (min-width: 768px) {
+  .section-title {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-title {
+    padding-left: 160px;
+    padding-right: 160px;
+  }
+}
+
+@media (min-width: 1700px) {
+  .section-title {
+    padding-left: 250px;
+    padding-right: 250px;
+  }
+}
+
+.section-title span {
+  padding-top: 10px;
+  display: block;
+  height: 100%;
+  font-size: 13px;
+  position: relative;
+  font-family: 'Prompt', sans-serif;
+  font-weight: 600;
+  color: #D1D1D1;
+  text-transform: uppercase;
+}
+
+@media (min-width: 1024px) {
+  .section-title span {
+    font-size: 16px;
+  }
+}
+
+.section-title :nth-child(2) {
+  color: #151515;
+  font-family: 'Prompt', sans-serif;
+  font-weight: 300;
+}
+/*# sourceMappingURL=sectionTitle.module.css.map */

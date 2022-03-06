@@ -1,0 +1,12 @@
+{
+    "version": 3,
+    "mappings": "AC4UA;;;;GAIG;AAJH;;;;GAIG;AD7UH,AAAA,cAAc,CAAC;EACb,QAAQ,EAAE,QAAQ;EAClB,OAAO,EAAE,IAAI;EACb,KAAK,EAAE,CAAC;EACR,MAAM,EAAE,CAAC;EACT,WAAW,EAAE,QAAQ;EACrB,MAAM,EAAE,IAAI;EACZ,cAAc,EAAE,GAAG;CAIpB;;ACkGC,MAAM,EAAE,SAAS,EAAE,MAAM;ED7G3B,AAAA,cAAc,CAAC;IASX,cAAc,EAAE,IAAI;GAEvB;;;AACD,AAAA,iBAAiB,CAAC;EAChB,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI;EACZ,gBAAgB,EEiCR,OAAO;EFhCf,aAAa,EAAE,IAAI;EACnB,gBAAgB,EAAE,MAAM;EACxB,WAAW,EAAE,SAAS;CAKvB;;ACsFC,MAAM,EAAE,SAAS,EAAE,MAAM;EDjG3B,AAAA,iBAAiB,CAAC;IAQd,KAAK,EAAE,IAAI;IACX,MAAM,EAAE,IAAI;GAEf",
+    "sources": [
+        "titleDot.module.scss",
+        "../../breakpoints/breakpoints.scss",
+        "../../_MainStyles.scss",
+        "../../breakpoints/breakpoints.scss"
+    ],
+    "names": [],
+    "file": "titleDot.module.css"
+}

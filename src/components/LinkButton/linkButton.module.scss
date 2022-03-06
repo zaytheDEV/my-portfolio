@@ -1,0 +1,60 @@
+//imports
+@import "../../breakpoints/breakpoints.scss";
+@import "../../MainStyles";
+
+.link-button {
+  width: fit-content;
+  height: fit-content;
+  border: solid 1px $mainBlack;
+  margin-top: 4vw;
+  padding: 4px 2em 4px 2em;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 12px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  text-decoration: none;
+  @include smoothTransition(border-color);
+  .link-button__title {
+    @include mediumFont;
+    white-space: nowrap;
+    text-decoration: none;
+    @include smoothTransition(color);
+  }
+  @include media(">=largeMobile") {
+    font-size: 15px;
+  }
+  @include media(">=tablet") {
+    font-size: 23px;
+  }
+  @include media(">=smallLT") {
+    margin-top: 2vw;
+    font-size: 1.2rem;
+    &:hover {
+      border-color: #fff;
+    }
+  }
+  @include media(">=laptop") {
+    padding: 6px 1.5em 6px 1.5em;
+    font-size: 1.6rem;
+  }
+    @include media(">=LGdesktop") {
+    padding: 6px 2em 6px 2em;
+    font-size: 1.9rem;
+  }
+  &:hover {
+    .link-button__title {
+      color: #fff !important;
+    }
+  }
+}
+.link-button__cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $mainBlack;
+  z-index: -1;
+}

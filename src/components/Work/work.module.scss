@@ -1,0 +1,42 @@
+//imports
+@import "../../MainStyles";
+@import "../../breakpoints/breakpoints.scss";
+
+//intro section
+.work-main {
+  width: 100vw;
+  overflow-x: hidden;
+}
+//Projects Section
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  gap: 100px;
+}
+.page-description {
+  width: 100vw;
+  @include pageIndent;
+  margin-top: 15vw;
+  position: relative;
+  padding-top: 70px;
+  p {
+    max-width: 600px;
+    line-height: 1.2em;
+    font-size: 20px;
+    @include mediumFont;
+    color: $mainBlack;
+    margin-top: 4vw;
+    @include media('>=laptop') {
+      max-width: 800px;
+      font-size: 2rem;
+      line-height: 1.5em;
+    }
+    @include media('>=LGdesktop') {
+      max-width: 900px;
+      font-size: 3rem;
+      line-height: 1.5em;
+    }
+  }
+}

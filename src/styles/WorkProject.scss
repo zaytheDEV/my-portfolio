@@ -1,0 +1,42 @@
+//Media Queries\
+@import "../breakpoints/breakpoints.scss";
+//Cubic-bezier
+$cubic-bezier: cubic-bezier(0.19, 1, 0.22, 1);
+.workProject_Main {
+  display: grid;
+  grid-template-rows: 85% 10%;
+  grid-template-areas:
+    "projImg"
+    "projDesc";
+  width: 100%;
+  height: 100%;
+}
+.workProject_img_container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  grid-area: projImg;
+  justify-content: center;
+  align-items: center;
+  .logoStyle {
+    width: 50%;
+  }
+  .bannerStyle{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+  }
+}
+.workProject_description {
+  text-align: center;
+  grid-area: projDesc;
+  padding: 20px;
+  font-size: 14px;
+  color: var(--gray);
+  b {
+    color: var(--black);
+  }
+  @include media('>=smallLT'){
+      font-size: 1.2rem;
+  }
+}

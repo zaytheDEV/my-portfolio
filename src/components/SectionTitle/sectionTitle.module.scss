@@ -1,0 +1,32 @@
+//imports
+@import "../../breakpoints/breakpoints.scss";
+@import "../../MainStyles";
+
+/* section title ----------*/
+.section-title {
+  @include pageIndent;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  span {
+    padding-top: 10px;
+    display: block;
+    height: 100%;
+    font-size: 13px;
+    position: relative;
+    @include semiBoldFont;
+    color: $mainGray;
+    text-transform: uppercase;
+    @include media(">=smallLT") {
+      font-size: 16px;
+    }
+  }
+  :nth-child(2) {
+    color: $mainBlack;
+    @include lightFont;
+  }
+}

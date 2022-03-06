@@ -1,0 +1,90 @@
+/**
+*
+* Testing
+*
+**/
+/**
+*
+* Testing
+*
+**/
+.work-main {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+.projects {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100vw;
+  gap: 100px;
+}
+
+.page-description {
+  width: 100vw;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 15vw;
+  position: relative;
+  padding-top: 70px;
+}
+
+@media (min-width: 375px) {
+  .page-description {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media (min-width: 768px) {
+  .page-description {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .page-description {
+    padding-left: 160px;
+    padding-right: 160px;
+  }
+}
+
+@media (min-width: 1700px) {
+  .page-description {
+    padding-left: 250px;
+    padding-right: 250px;
+  }
+}
+
+.page-description p {
+  max-width: 600px;
+  line-height: 1.2em;
+  font-size: 20px;
+  font-family: 'Prompt', sans-serif;
+  font-weight: 500;
+  color: #151515;
+  margin-top: 4vw;
+}
+
+@media (min-width: 1366px) {
+  .page-description p {
+    max-width: 800px;
+    font-size: 2rem;
+    line-height: 1.5em;
+  }
+}
+
+@media (min-width: 1700px) {
+  .page-description p {
+    max-width: 900px;
+    font-size: 3rem;
+    line-height: 1.5em;
+  }
+}
+/*# sourceMappingURL=work.module.css.map */

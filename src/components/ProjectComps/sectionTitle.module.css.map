@@ -1,0 +1,12 @@
+{
+    "version": 3,
+    "mappings": "AE4UA;;;;GAIG;AAJH;;;;GAIG;AF9UH,AAAA,aAAa,CAAC;EACZ,KAAK,EAAE,IAAI;EACX,QAAQ,EAAE,MAAM;EAChB,cAAc,EAAE,IAAI;ECmDpB,OAAO,EAAE,IAAI;EACb,WAAW,EAAE,MAAM;EACnB,eAAe,EAAE,MAAM;CDpCxB;;AApBD,AAKE,aALW,CAKX,EAAE,CAAC;EACD,KAAK,EAAE,IAAI;EACX,QAAQ,EAAE,QAAQ;EAClB,SAAS,EAAE,IAAI;EACf,WAAW,EAAE,IAAI;EACjB,cAAc,EAAE,MAAM;EACtB,cAAc,EAAE,UAAU;ECD5B,WAAW,EAAE,oBAAoB;EACjC,WAAW,EAAE,GAAG;CDEf;;AEiGD,MAAM,EAAE,SAAS,EAAE,MAAM;EF9G3B,AAeI,aAfS,CAeT,EAAE,CAAC;IACD,SAAS,EAAE,IAAI;IACf,cAAc,EAAE,MAAM;GACvB",
+    "sources": [
+        "sectionTitle.module.scss",
+        "../../_MainStyles.scss",
+        "../../breakpoints/breakpoints.scss",
+        "../../breakpoints/breakpoints.scss"
+    ],
+    "names": [],
+    "file": "sectionTitle.module.css"
+}

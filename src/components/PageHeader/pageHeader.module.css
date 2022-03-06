@@ -1,0 +1,160 @@
+/**
+*
+* Testing
+*
+**/
+/**
+*
+* Testing
+*
+**/
+.intro {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: hidden;
+}
+
+@media (min-width: 375px) {
+  .intro {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media (min-width: 768px) {
+  .intro {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .intro {
+    padding-left: 160px;
+    padding-right: 160px;
+  }
+}
+
+@media (min-width: 1700px) {
+  .intro {
+    padding-left: 250px;
+    padding-right: 250px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .intro {
+    padding-top: 50px;
+  }
+}
+
+.intro-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-weight: normal;
+  line-height: 0.85;
+}
+
+.intro-title-holder {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  overflow-y: hidden;
+}
+
+.main-title-text {
+  display: block;
+  position: relative;
+  font-size: 12.5vw;
+  padding-right: 4.5vw;
+  font-family: 'Prompt', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #151515;
+  will-change: transform;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  white-space: nowrap;
+}
+
+.main-title-text b {
+  font-family: 'Prompt', sans-serif;
+  font-weight: 700;
+  color: #151515;
+}
+
+@media (min-width: 768px) {
+  .main-title-text {
+    letter-spacing: -0.3vw;
+    padding-right: 3vw;
+  }
+}
+
+@media (min-width: 1024px) {
+  .main-title-text {
+    padding-right: 4vw;
+  }
+}
+
+.header-description {
+  margin-top: 5vw;
+  font-family: 'Prompt', sans-serif;
+  font-weight: 500;
+  color: #8d8d8d;
+}
+
+@media (min-width: 1366px) {
+  .header-description {
+    font-size: 1.3rem;
+  }
+}
+
+.scroll-indicator {
+  display: block;
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-size: 1.2rem;
+  font-family: 'Prompt', sans-serif;
+  font-weight: 500;
+  color: #F73131;
+  letter-spacing: 3px;
+}
+
+.scroll--mobile {
+  bottom: 160px !important;
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+/*# sourceMappingURL=pageHeader.module.css.map */

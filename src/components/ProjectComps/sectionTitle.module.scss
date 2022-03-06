@@ -1,0 +1,23 @@
+@import "../../MainStyles";
+@import "../../breakpoints/breakpoints.scss";
+.title-holder {
+  width: 100%;
+  overflow: hidden;
+  padding-bottom: 10px;
+  @include centerContent;
+  h1 {
+    width: 100%;
+    position: relative;
+    font-size: 17vw;
+    line-height: 17vw;
+    letter-spacing: -0.8vw;
+    text-transform: capitalize;
+    @include semiBoldFont;
+  }
+  @include media(">=laptop") {
+    h1 {
+      font-size: 14vw;
+      letter-spacing: -0.7vw;
+    }
+  }
+}

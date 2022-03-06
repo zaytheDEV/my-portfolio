@@ -1,0 +1,85 @@
+@import "../../MainStyles";
+@import "../../breakpoints/breakpoints.scss";
+.col-item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.col-item__screen {
+  width: 100%;
+  height: 400px;
+  position: relative;
+}
+.screen__img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  @include centerContent;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  img {
+    height: 100%;
+    object-fit: contain;
+  }
+}
+.screen__backdrop {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  will-change: transform;
+  transition: transform 1.5s $cubic-bezier;
+}
+.screen__title {
+  display: flex;
+  width: 100%;
+  height: fit-content;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+//Break Points
+@include media('>=largeMobile') {
+    .col-item__screen {
+    height: 480px;
+  }
+}
+@include media(">=tablet") {
+    .col-item{
+        width: 450px;
+    }
+  .col-item__screen {
+    height: 450px;
+  }
+}
+@include media(">=smallLT") {
+   .col-item{
+        width: 100%;
+    } 
+  .col-item__screen {
+    height: 550px;
+  }
+}
+@include media(">=laptop") {
+    .col-item__screen {
+    height: 550px;
+  }
+}
+@include media(">=LGdesktop") {
+  .col-item {
+    gap: 20px;
+  }
+  .screen__img{
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .col-item__screen {
+    height: 650px;
+  }
+}

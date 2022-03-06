@@ -1,0 +1,22 @@
+.viewPage__item{
+    width: 100%;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+    .viewPage_IMG{
+      width: 100%;
+      height: 700px;
+      img{
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+      }
+    }
+    .viewPage-caption{
+      text-align: center;
+      padding: 20px;
+      text-transform: capitalize;
+      font-size: 1.25rem;
+    }
+  }

@@ -1,0 +1,198 @@
+/**
+*
+* Testing
+*
+**/
+/**
+*
+* Testing
+*
+**/
+.navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100vw;
+}
+
+.nav__icon {
+  top: 15px;
+  padding: 5px;
+  font-size: 0.89rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.nav__icon span {
+  font-family: 'Prompt', sans-serif;
+  font-weight: 500;
+}
+
+.nav__work {
+  position: fixed;
+  left: 20px;
+}
+
+.nav__title {
+  position: fixed;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  padding: 5px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.nav__title span {
+  font-size: 1rem;
+  font-family: 'Prompt', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #151515;
+}
+
+.nav__about {
+  position: fixed;
+  right: 20px;
+}
+
+.nav__contactCircle {
+  position: fixed;
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  bottom: 15px;
+  right: 20px;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  background-color: #363636;
+  cursor: pointer;
+  z-index: 1000;
+  -webkit-transition: background-color 0.5s ease-in-out;
+  transition: background-color 0.5s ease-in-out;
+}
+
+.nav__contactSVG {
+  width: 20px;
+  height: 100%;
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+}
+
+.nav__contactCircle:hover {
+  background-color: #696969;
+}
+
+.nav__contactCircle:hover .nav__contactSVG {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.nav__aboutTitle {
+  margin-right: 5px;
+}
+
+.navigation__social {
+  position: fixed;
+  bottom: 15px;
+  width: 60px;
+  left: 20px;
+  display: none;
+  z-index: 1000;
+  gap: 10px;
+}
+
+@media (min-width: 1024px) {
+  .navigation__social {
+    width: 70px;
+    bottom: 10px;
+  }
+}
+
+.navigation__link {
+  width: 35px;
+  height: 100%;
+}
+
+@media (min-width: 768px) {
+  .navigation__link {
+    width: 28px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .navigation__link {
+    width: 35px;
+  }
+}
+
+/* tablet view -----------------*/
+@media (min-width: 768px) {
+  .navigation__social {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .nav__icon {
+    font-size: 1rem;
+  }
+  .nav__about {
+    right: 30px;
+  }
+  .nav__work {
+    left: 30px;
+  }
+  .nav__contactCircle {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+/* Desktop View -----------*/
+@media (min-width: 1024px) {
+  .nav__title {
+    top: 30px;
+  }
+  .nav__title span {
+    font-size: 2rem;
+  }
+  .nav__work {
+    left: 60px;
+    top: 30px;
+  }
+  .nav__about {
+    right: 60px;
+    top: 30px;
+  }
+  .nav__contactCircle {
+    height: 60px;
+    width: 60px;
+    right: 60px;
+    bottom: 30px;
+  }
+  .nav__contactSVG {
+    width: 25px;
+  }
+  .navigation__social {
+    left: 60px;
+    bottom: 30px;
+  }
+}
+/*# sourceMappingURL=navigation.module.css.map */

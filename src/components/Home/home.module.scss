@@ -1,0 +1,210 @@
+@import "../../breakpoints/breakpoints.scss";
+@import "../../MainStyles";
+
+//Main 
+.home {
+  width: 100vw;
+  overflow-x: hidden;
+}
+//----------------Intro Photo
+.intro-photo {
+  height: 550px;
+  position: relative;
+  overflow: hidden;
+  margin-top: -30vw;
+  @include pageIndent;
+  @include centerContent;
+  .photo {
+    position: relative;
+    overflow: hidden;
+    width: 450px;
+    height: 100%;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    @include media(">=tablet") {
+      width: 550px;
+    }
+    @include media('>=laptop') {
+      width: 650px;
+    }
+    @include media('>=LGdesktop') {
+      width: 700px;
+    }
+  }
+
+  .photo-cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    will-change: width;
+  }
+  @include media(">=largeMobile") {
+    height: 60vh;
+  }
+  @include media(">=tablet") {
+    height: 650px;
+  }
+  @include media(">=smallLT") {
+    height: 700px;
+    margin-top: 0;
+  }
+  @include media(">=laptop") {
+    height: 750px;
+    margin-top: 0;
+  }
+  @include media(">=LGdesktop") {
+    height: 900px;
+    margin-top: 0;
+  }
+}
+/* short about section ----------*/
+.landing-description {
+  width: 100vw;
+  height: auto;
+  @include pageIndent;
+  padding-top: 70px;
+  margin-top: 8vw;
+  margin-bottom: 8vw;
+  padding-bottom: 10vw;
+  position: relative;
+}
+.description-text {
+  @include mediumFont;
+  color: $mainBlack;
+  margin-top: 2vw;
+  line-height: 1.1;
+  margin-bottom: 5vw;
+  @include responsiveParagraph;
+  b {
+    @include mediumFont;
+    color: $mainRed;
+  }
+}
+
+/* recent projects section ----------------------*/
+.projects {
+  height: auto;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10vw;
+  position: relative;
+  padding-top: 70px;
+  @include pageIndent;
+}
+.projects-header {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.projects__list {
+  display: flex;
+  align-self: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5vw;
+}
+.projects-list__titles {
+  width: 100%;
+  text-transform: capitalize;
+  color: #bfbfbf;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+}
+.projects-list__title {
+  height: fit-content;
+}
+.projects-list__title--2 {
+  font-size: 2rem;
+  color: #363636;
+}
+@include media(">=largeMobile") {
+  .projects-list__title {
+    font-size: 1.5rem;
+  }
+  .projects-list__title--2 {
+    font-size: 2.75rem;
+  }
+}
+@include media(">=tablet") {
+  .projects-list__title {
+    font-size: 2rem;
+  }
+  .projects-list__title--2 {
+    font-size: 3.5pc;
+  }
+}
+@include media(">=smallLT") {
+  .projects-list__title {
+    font-size: 2.5rem;
+  }
+  .projects-list__title--2 {
+    font-size: 4.5pc;
+  }
+}
+//project column styles
+.projects-columns {
+  display: flex;
+  margin-top: 4vw;
+  gap: 20px;
+  .projects-columns__column--right {
+    margin-top: 200px;
+  }
+  @include media(">=smallLT") {
+    gap: 100px;
+  }
+  @include media(">=laptop") {
+    .projects-columns__column--right {
+      margin-top: 400px;
+    }
+  }
+}
+.projects-columns__column {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 100%;
+}
+
+.projects-columns__column__project {
+  margin-bottom: 50px;
+  width: 100%;
+  @include media(">=laptop") {
+    margin-bottom: 200px;
+  }
+  @include media(">=LGdesktop") {
+    margin-bottom: 250px;
+  }
+}
+/* UI Design Banner -----------------*/
+.design-banner {
+  position: relative;
+  height: 500px;
+  overflow: hidden;
+  @include media(">=largeMobile") {
+    height: 600px;
+  }
+  @include media(">=tablet") {
+    height: 600px;
+  }
+  @include media(">=smallLT") {
+    height: 800px;
+  }
+  @include media(">=LGdesktop") {
+    height: 900px;
+  }
+}
+.design-banner__img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  will-change: transform;
+}
